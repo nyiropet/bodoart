@@ -8,18 +8,23 @@
 	<?php wp_head(); ?>
 
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>> 
 	<header>
-		<h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-	</header>
-	<nav>
-		<?php
+		<button class="hamburger hamburger--spin-r" type="button">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
+		<h1 id="logo"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+		<nav>
+			<?php
 
-		$defaults = array(
-			'container' => false,
-			'theme_location' => 'primary-menu'
-		);
-		wp_nav_menu($defaults);
+			$defaults = array(
+				'container' => false,
+				'theme_location' => 'primary-menu'
+			);
+			wp_nav_menu($defaults);
 
-		?>
-	</nav>
+			?>
+		</nav>
+	</header> 
