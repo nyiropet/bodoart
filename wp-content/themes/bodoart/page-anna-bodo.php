@@ -6,6 +6,7 @@
 
 <?php get_header(); ?>
 
+<h1><?php the_title(); ?></h1>
 <div>
 	<nav>
 	<ul>
@@ -15,20 +16,8 @@
 	</ul>
 	</nav>
 </div>
-<div>
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-		<h1><?php the_title(); ?></h1>
-		<p><?php the_content(); ?></p>
-
-	<?php endwhile; else: ?>
-
-		<p><?php _e( 'Sajnáljuk, nem található a keresett oldal', 'bodoart_text_domain' ); ?></p>
-
-	<?php endif; ?>
-</div>
 <div id="about-me" class="scroll-to">
-	<h1>Magamrol</h1>
+	<?php get_template_part('content', 'annaaboutme'); ?>
 </div>
 <div id="glass" class="scroll-to">
 	<h1>Uveg</h1>

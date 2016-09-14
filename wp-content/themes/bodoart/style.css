@@ -154,6 +154,7 @@ button {
 
 header {
 	width: 100%;
+	min-width: 300px;
 	position: relative;
 	text-align: center;
 	background: #fff;
@@ -171,6 +172,7 @@ header nav {
     height: 0;
     background: #fff;
     transition-duration: 0.4s;
+    text-align: left;
 }
 
 header nav.active {
