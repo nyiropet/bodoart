@@ -15,7 +15,13 @@
 				<span class="hamburger-inner"></span>
 			</span>
 		</button>
-		<h1 id="logo"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+		<div id="logo-container">
+			<a href="<?php bloginfo('url'); ?>">
+				<span class="logo">					
+				</span>
+				<h1><?php bloginfo('name'); ?></h1>
+			</a>
+		</div>
 		<nav>
 			<?php
 

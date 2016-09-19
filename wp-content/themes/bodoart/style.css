@@ -21,6 +21,7 @@ Text Domain: bodoart_text_domain
 
 body {
     font-family: 'Raleway', sans-serif;
+    background: #f9f9f9;
 }
 
 ul {
@@ -31,8 +32,60 @@ a {
     text-decoration: none;
 }
 
+p {
+    line-height: 1.5em;
+}
+
 button {
 	outline: none;
+}
+
+
+
+/* ==========================
+* Person Specific Styles
+=============================*/
+
+.page-template-page-anna-bodo .hamburger-inner,
+.page-template-page-anna-bodo .hamburger-inner::before,
+.page-template-page-anna-bodo .hamburger-inner::after,
+.single-anna_glass .hamburger-inner,
+.single-anna_glass .hamburger-inner::before,
+.single-anna_glass .hamburger-inner::after,
+.single-anna_textil .hamburger-inner,
+.single-anna_textil .hamburger-inner::before,
+.single-anna_textil .hamburger-inner::after,
+.single-anna_graphic .hamburger-inner,
+.single-anna_graphic .hamburger-inner::before,
+.single-anna_graphic .hamburger-inner::after,
+.page-template-page-anna-bodo header nav {
+    background-color: #009999;
+}
+
+.page-template-page-anna-bodo .art-heading,
+.single-anna_glass .primary h1,
+.single-anna_textil .primary h1,
+.single-anna_graphic .primary h1 {
+    color: #009999;
+}
+
+.page-template-page-jeno-bodo .hamburger-inner,
+.page-template-page-jeno-bodo .hamburger-inner::before,
+.page-template-page-jeno-bodo .hamburger-inner::after,
+.single-jeno_glass .hamburger-inner,
+.single-jeno_glass .hamburger-inner::before,
+.single-jeno_glass .hamburger-inner::after,
+.single-jeno_ceramics .hamburger-inner,
+.single-jeno_ceramics .hamburger-inner::before,
+.single-jeno_ceramics .hamburger-inner::after,
+.page-template-page-jeno-bodo header nav {
+    background-color: #b7713f;
+}
+
+.page-template-page-jeno-bodo .art-heading,
+.single-jeno_glass .primary h1,
+.single-jeno_ceramics .primary h1 {
+    color: #b7713f;
 }
 
 
@@ -52,7 +105,7 @@ button {
   position: absolute;
   left: 0;
   z-index: 9999;
-  padding: 15px 15px;
+  padding: 1.36em 1em;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, -webkit-filter;
@@ -181,30 +234,58 @@ header {
     position: fixed;
     top: 0;
     z-index: 9999;
+    box-shadow: 0px 7px 20px -8px #222;
 }
 
-#logo {
+/* Logo */
+
+#logo-container {
     display: inline-block;
     margin: 0.25em;
+    margin-top: 0.5em;
+}
+
+#logo-container h1 {
+  display: none;
+  margin: 0.25em;
+}
+
+.logo {
+    display: block;
+    width: 56px;
+    height: 56px;
+    background: url(img/logos-copy.png);
+    background-size: 185px 56px;
+    background-position: -66px 0px;
+}
+
+.page-template-page-jeno-bodo .logo {
+    background-position: 0px 0px; 
+}
+
+.page-template-page-anna-bodo .logo,
+.single-anna_glass .logo {
+    background-position: -130px 0px; 
 }
 
 /* Header navigation */
+
 header nav {
     height: 0;
-    background: #333;
     transition-duration: 0.4s;
     text-align: left;
     margin-left: -500px;
+    background-color: #000;
 }
 
 header nav.active {
     height: 153px;
-    background: #333;
     margin-left: 0;
 }
 
 header nav ul {
 	margin: 0;
+    padding: 0;
 }
 
 header nav ul li {
@@ -213,7 +294,10 @@ header nav ul li {
 }
 
 header nav ul li a {
+    display: block;
     color: #fff;
+    width: 100%;
+    height: auto;
 }
 
 
@@ -223,17 +307,120 @@ header nav ul li a {
 =============================*/
 
 content {
-  display: block;
-  width: 100%;
-  margin-top: 56px;
-  padding: 1em;
-  padding-top: 0;
+    display: block;
+    width: 100%;
+    margin-top: 72px;
+}
+
+.page-template-page-anna-bodo content,
+.page-template-page-jeno-bodo content {
+    margin-top: 110px;
+}
+
+.arts-container {
+    width: 100%;
+    padding: 1em;
+}
+
+.art-heading {
+    font-weight: 100;
+    font-size: 4em;
+    margin: 0.25em 0;
+}
+
+.post-type-container {
+    width: 100%;
+    margin: 1em 0;
+    background: #fff;
+    color: #555;
+    box-shadow: 0px 5px 15px -4px #222;
+}
+
+.post-type-container img {
+    width: 100%;
+    height: auto;
+}
+
+.post-type-container p,
+.single .post-type-container h1{
+    margin: 0;
+    padding: 0.5em;
+}
+
+/* Scroll Navigation */
+
+.logged-in .anna-scroll-nav,
+.logged-in .jeno-scroll-nav {
+    top: 118px;
+}
+
+.anna-scroll-nav,
+.jeno-scroll-nav {
+    width: 100%;
+    min-width: 300px;
+    position: fixed;
+    background: #fff;
+    top: 72px;
+    opacity: 0.9;
+}
+
+.anna-scroll-nav ul,
+.jeno-scroll-nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+.anna-scroll-nav ul li {
+    float: left;
+    width: 25%;
+    padding: 1em 0.5em;
+    text-align: center;
+    font-size: 0.75em;
+}
+
+.jeno-scroll-nav ul li {
+    float: left;
+    width: 33.333333%;
+    padding: 1em 0.5em;
+    text-align: center;
+    font-size: 0.75em;
+}
+
+.anna-scroll-nav ul li a,
+.jeno-scroll-nav ul li a {
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* Single Page Styles */
+
+.single .primary h1 {
+    font-weight: 100;
+}
+
+
+
+/* ==========================
+* Footer Styles
+=============================*/
+
+footer {
+    width: 100%;
+    padding: 1em;
+    background-color: #333;
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+    font-weight: 200;
+    font-size: 0.75em;
 }
 
 
 
 
 
-.scroll-to {
-	width: 100%;
-}
+
+
+

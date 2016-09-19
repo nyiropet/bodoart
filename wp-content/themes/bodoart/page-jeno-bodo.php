@@ -5,36 +5,24 @@
 ?>
 
 <?php get_header(); ?>
-
-<div>
-	<nav>
+<nav class="jeno-scroll-nav">
 	<ul>
 		<li><a href="#about-me"><?php _e( 'Magamról', 'bodoart_text_domain' ); ?></a></li>
 		<li><a href="#glass"><?php _e( 'Üveg', 'bodoart_text_domain' ); ?></a></li>
-		<li><a href="#ceramic"><?php _e( 'Keramia', 'bodoart_text_domain' ); ?></a></li>
+		<li><a href="#ceramics"><?php _e( 'Kerámia', 'bodoart_text_domain' ); ?></a></li>
 	</ul>
-	</nav>
+</nav>
+<!-- <h1 class="page-heading"><?php //the_title(); ?></h1> -->
+<div id="about-me" class="arts-container">
+	<h2 class="art-heading"><?php _e( 'Magamról', 'bodoart_text_domain' ); ?></h2>
+	<?php get_template_part('content', 'jenoaboutme'); ?>
 </div>
-<div>
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-		<h1><?php the_title(); ?></h1>
-		<p><?php the_content(); ?></p>
-
-	<?php endwhile; else: ?>
-
-		<p><?php _e( 'Sajnáljuk, nem található a keresett oldal', 'bodoart_text_domain' ); ?></p>
-
-	<?php endif; ?>
+<div id="glass" class="arts-container">
+	<h2 class="art-heading"><?php _e( 'Üveg', 'bodoart_text_domain' ); ?></h2>
+	<?php get_template_part('content', 'jenoglass'); ?>
 </div>
-<div id="about-me" class="scroll-to">
-	<h1>Magamrol</h1>
+<div id="ceramics" class="arts-container">
+	<h2 class="art-heading"><?php _e( 'Kerámia', 'bodoart_text_domain' ); ?></h2>
+	<?php get_template_part('content', 'jenoceramics'); ?>
 </div>
-<div id="glass" class="scroll-to">
-	<h1>Uveg</h1>
-</div>
-<div id="ceramic" class="scroll-to">
-	<h1>Keramia</h1>
-</div>
-
 <?php get_footer(); ?>

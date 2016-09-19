@@ -3,7 +3,7 @@
 	$num_posts = ( is_front_page() ) ? 3 : -1;
 
 	$args = array(
-		'post_type' => 'anna_magamrol',
+		'post_type' => 'jeno_glass',
 		'posts_per_page' => $num_posts
 	);
 
@@ -11,12 +11,14 @@
 
 	?>
 
-<section class="anna-aboutme-post-type-container aboutme-container">
-	
+<section class="jeno-glass-post-type-container post-type-container">
 	<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 	
-	<div class="anna-aboutme-post-type-content">
-		<p><?php the_field('magamrol'); ?></p>
+	<div class="jeno-glass-post-type-content">
+		<a href="<?php the_permalink(); ?>">
+			<?php the_post_thumbnail('large'); ?>
+		</a>
+		<p><?php the_field('description'); ?></p>
 	</div>
 
 	<?php endwhile; endif; wp_reset_postdata(); ?>

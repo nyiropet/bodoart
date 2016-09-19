@@ -11,15 +11,14 @@
 
 	?>
 
-<section class="anna-glass-post-type-post">
-	<h2>Üveg</h2>
+<section class="anna-glass-post-type-container post-type-container">
 	<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 	
-	<div class="anna-glass-post-type-container">
-		<a id="<?php echo get_the_ID(); ?>"><?php the_post_thumbnail('medium'); ?></a>
-		<div class="anna-glass-post-type-post-content">
-			<?php the_field('description'); ?>
-		</div>	
+	<div class="anna-glass-post-type-content">
+		<a href="<?php the_permalink(); ?>">
+			<?php the_post_thumbnail('large'); ?>	
+		</a>
+		<p><?php the_field('description'); ?></p>
 	</div>
 
 	<?php endwhile; endif; wp_reset_postdata(); ?>
