@@ -3,7 +3,7 @@
 	$num_posts = ( is_front_page() ) ? 3 : -1;
 
 	$args = array(
-		'post_type' => 'anna_magamrol',
+		'post_type' => 'anna_glass',
 		'posts_per_page' => $num_posts
 	);
 
@@ -11,15 +11,14 @@
 
 	?>
 
-<section class="anna-aboutme-post-type-post">
-	
+<section class="anna-glass-post-type-post">
+	<h2>Üveg</h2>
 	<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 	
-	<div class="anna-aboutme-post-type-container">
-		<h2><?php the_title(); ?></h2>
-		<?php the_post_thumbnail('medium'); ?>
-		<div class="anna-aboutme-post-type-post-content">
-			<p><?php the_field('anna_magamrol'); ?></p>
+	<div class="anna-glass-post-type-container">
+		<a id="<?php echo get_the_ID(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+		<div class="anna-glass-post-type-post-content">
+			<?php the_field('description'); ?>
 		</div>	
 	</div>
 

@@ -15,8 +15,20 @@ Text Domain: bodoart_text_domain
 * General Styles
 =============================*/
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
 ul {
 	list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 button {
@@ -151,6 +163,13 @@ button {
 /* ==========================
 * Header Styles
 =============================*/
+.logged-in #wpadminbar {
+    position: fixed;
+}
+
+.logged-in header {
+    top: 46px;
+}
 
 header {
 	width: 100%;
@@ -159,25 +178,29 @@ header {
 	text-align: center;
 	background: #fff;
 	overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
 }
 
 #logo {
-	display: inline-block;
-	margin: 0.25em;
+    display: inline-block;
+    margin: 0.25em;
 }
 
 /* Header navigation */
 header nav {
-    opacity: 0;
     height: 0;
-    background: #fff;
+    background: #333;
     transition-duration: 0.4s;
     text-align: left;
+    margin-left: -500px;
 }
 
 header nav.active {
-    opacity: 1;
-    height: 73px;
+    height: 153px;
+    background: #333;
+    margin-left: 0;
 }
 
 header nav ul {
@@ -186,16 +209,31 @@ header nav ul {
 
 header nav ul li {
 	display: block;
+    padding: 1em;
+}
+
+header nav ul li a {
+    color: #fff;
+}
+
+
+
+/* ==========================
+* Content Styles
+=============================*/
+
+content {
+  display: block;
+  width: 100%;
+  margin-top: 56px;
+  padding: 1em;
+  padding-top: 0;
 }
 
 
 
 
 
-
-
 .scroll-to {
-	width: 300px;
-	height: 300px;
-	background: blue;
+	width: 100%;
 }
