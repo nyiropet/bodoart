@@ -9,20 +9,20 @@
 
 </head>
 <body <?php body_class(); ?>> 
-	<header>
+	<header class="animate">
 		<button class="hamburger hamburger--spin-r" type="button">
-			<span class="hamburger-box">
+			<span class="hamburger-box animate">
 				<span class="hamburger-inner"></span>
 			</span>
 		</button>
-		<div id="logo-container">
+		<div class="logo-container animate">
 			<a href="<?php bloginfo('url'); ?>">
-				<span class="logo">					
+				<span class="logo animate">					
 				</span>
 				<h1><?php bloginfo('name'); ?></h1>
 			</a>
 		</div>
-		<nav>
+		<nav class="animate">
 			<?php
 
 			$defaults = array(
@@ -33,5 +33,10 @@
 
 			?>
 		</nav>
+		<a class="header-phone"></a>
+		<ul class="phone-numbers">
+			<li><a href="tel:06308793966">Hívás: Bodó Anna</a></li>
+			<li><a href="tel:06303841500">Hívás: Bodó Jenő</a></li>
+		</ul>
 	</header> 
-	<content>
+	<content class="animate">

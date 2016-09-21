@@ -1,6 +1,6 @@
 <?php
 
-	$num_posts = ( is_front_page() ) ? 3 : -1;
+	$num_posts = ( is_front_page() ) ? 2 : -1;
 
 	$args = array(
 		'post_type' => 'anna_glass',
@@ -14,7 +14,7 @@
 <section class="anna-glass-post-type-container post-type-container">
 	<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 	
-	<div class="anna-glass-post-type-content">
+	<div class="anna-glass-post-type-content post-type-content">
 		<a href="<?php the_permalink(); ?>">
 			<?php the_post_thumbnail('large'); ?>	
 		</a>

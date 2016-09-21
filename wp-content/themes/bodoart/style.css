@@ -62,6 +62,7 @@ button {
     background-color: #009999;
 }
 
+.page-template-page-anna-bodo .page-heading,
 .page-template-page-anna-bodo .art-heading,
 .single-anna_glass .primary h1,
 .single-anna_textil .primary h1,
@@ -82,6 +83,7 @@ button {
     background-color: #b7713f;
 }
 
+.page-template-page-jeno-bodo .page-heading,
 .page-template-page-jeno-bodo .art-heading,
 .single-jeno_glass .primary h1,
 .single-jeno_ceramics .primary h1 {
@@ -239,13 +241,13 @@ header {
 
 /* Logo */
 
-#logo-container {
+.logo-container {
     display: inline-block;
     margin: 0.25em;
     margin-top: 0.5em;
 }
 
-#logo-container h1 {
+.logo-container h1 {
   display: none;
   margin: 0.25em;
 }
@@ -279,7 +281,7 @@ header nav {
 }
 
 header nav.active {
-    height: 153px;
+    height: 100px;
     margin-left: 0;
 }
 
@@ -300,7 +302,44 @@ header nav ul li a {
     height: auto;
 }
 
+/* Header Phone */
 
+a.header-phone {
+    display: block;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background: url(img/phone.png);
+    background-size: 42px 42px;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+}
+
+ul.phone-numbers {
+    display: block;
+    width: 100%;
+    height: 0;
+    margin: 0;
+    transition-duration: 0.4s;
+    text-align: right;
+    margin-right: -500px;
+    background-color: #000;
+}
+
+ul.phone-numbers li {
+    display: block;
+    padding: 1em;
+}
+
+ul.phone-numbers li a {
+    color: #fff;
+}
+
+ul.phone-numbers.active {
+    height: 100px;
+    margin-left: 0;
+}
 
 /* ==========================
 * Content Styles
@@ -330,15 +369,20 @@ content {
 
 .post-type-container {
     width: 100%;
+}
+
+.post-type-content {
     margin: 1em 0;
     background: #fff;
     color: #555;
     box-shadow: 0px 5px 15px -4px #222;
+    transition-duration: .4s;
 }
 
 .post-type-container img {
     width: 100%;
     height: auto;
+    transition-duration: .4s;
 }
 
 .post-type-container p,
@@ -392,6 +436,56 @@ content {
     text-transform: uppercase;
 }
 
+.anna-profile-image {
+    display: block;
+    background: url(img/anna-profile.jpg);
+    background-size: 200px 200px;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.jeno-profile-image {
+    display: block;
+    background: url(img/jeno-profile.jpg);
+    background-size: 200px 200px;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.page-heading {
+    font-weight: 300;
+    font-size: 3em;
+    text-align: center;
+}
+
+.contact-info {
+    width: 150px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.contact-info a {
+    display: block;
+    min-height: 20px;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    padding: 0 0 0 30px;
+    margin: 0 0 10px;
+    color: #999;
+}
+
+.contact-info li.phone a {
+    background-image: url(img/phone.png);
+}
+
+.contact-info li.email a {
+    background-image: url(img/mail.png);
+}
+
 /* Single Page Styles */
 
 .single .primary h1 {
@@ -419,8 +513,138 @@ footer p {
 
 
 
+/* ==========================
+* Media Queries
+=============================*/
+
+@media (min-width: 783px) {
+    /* ==========================
+    * Header Styles
+    =============================*/    
+
+    .logged-in header {
+        top: 32px;
+    }
+
+
+    /* ==========================
+    * Content Styles
+    =============================*/    
+
+    .post-type-container {
+        float: left;
+    }
+
+    .post-type-content img:hover {
+        transform: scale(1.1);
+    }
+
+    .post-type-content {
+        width: 48.777%;
+        float: left;
+    }
+
+    .post-type-content a {
+        display: block;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .post-type-content p {
+        display: none;
+    }
+
+    .post-type-content:first-child {
+        margin-right: 1em;
+    }
 
 
 
+    /* ==========================
+    * Footer Styles
+    =============================*/    
 
+    footer {
+        float: left;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    /* ==========================
+    * Header Styles
+    =============================*/ 
+
+    /* Header Navigation */
+
+    header nav {
+        height: 50px;
+        margin: 0;
+    }
+
+    header nav ul li {
+        display: inline-block;
+        width: 49.8%;
+        text-align: center;
+    }
+
+    .hamburger-box {
+        top: 0px;
+        transition-duration: .4s;
+    }
+
+    .hamburger-box.animate {
+        top: -200px;
+        transition-duration: .4s;
+    }
+
+    /* Header Animation Styles */
+
+    .home header.animate {
+        height: 354px;
+    }
+
+    .home .logo-container.animate {
+        margin: 0;
+    }
+
+    .home header .logo.animate {
+        width: 300px;
+        height: 300px;
+        background-size: 1000px 300px;
+        background-position: -355px 0px;
+    }
+
+    .home content.animate {
+        margin-top: 354px;
+        transition-duration: .4s;
+    }
+
+    .home header {
+        height: 122px;
+        transition-duration: .4s;
+    }
+
+    .home .logo-container {
+        margin: 0.25em;
+        margin-top: 0.5em;
+        transition-duration: .4s;
+    }
+
+    .home header .logo {
+        width: 56px;
+        height: 56px;
+        background-size: 185px 56px;
+        background-position: -66px 0px;
+        transition-duration: .4s;
+    }
+
+    .home content {
+        margin-top: 122px;
+        transition-duration: .4s;
+    }
+
+
+
+}
 

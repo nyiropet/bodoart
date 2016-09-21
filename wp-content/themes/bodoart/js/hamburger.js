@@ -1,6 +1,22 @@
 jQuery( document ).ready( function( $ ) {
 	$('.hamburger').click(function(){
-		$(this).toggleClass('is-active');
-		$('nav').toggleClass('active');
+		if($('.phone-numbers').hasClass('active')) {
+			$('.phone-numbers').removeClass('active');
+			$(this).toggleClass('is-active');
+			$('header nav').toggleClass('active');
+		}else {
+			$(this).toggleClass('is-active');
+			$('header nav').toggleClass('active');
+		}
+	});
+
+	$('.header-phone').click(function(){
+		if($('header nav').hasClass('active')) {
+			$('.hamburger').removeClass('is-active');
+			$('header nav').removeClass('active');
+			$('.phone-numbers').toggleClass('active');
+		} else {
+			$('.phone-numbers').toggleClass('active');
+		}
 	});
 });
