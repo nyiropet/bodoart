@@ -9,11 +9,11 @@
       	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	         
 			<div class="single-anna-glass-post-type-container post-type-container">
-		    	<div class="primary">
-		    		<h1><?php the_title();?></h1>
+		    	<div class="page-content-container">
 		    		<?php the_field('picture'); ?>
 		    	</div>
-		    	<div class="secondary">
+		    	<div class="sidebar-nav">
+		    		<h1><?php the_title();?></h1>
 		    		<p><?php the_field('description'); ?></p>
 		    		<?php previous_post_link(); ?>
 		    		<a href="<?php bloginfo('url'); ?>/anna-bodo"><p>Vissza Bodó Anna portfoliójához</p></a>

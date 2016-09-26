@@ -1,10 +1,10 @@
-=== Slider ===
+﻿=== Slider ===
 Contributors: webdorado
 Donate link: https://web-dorado.com/products/wordpress-slider-plugin.html
 Tags: image slider, slider, slideshow, image, images, responsive, shortcode, widget, jquery, gallery, swipe, layer
 Requires at least: 3.4
 Tested up to: 4.6
-Stable tag: 1.1.50
+Stable tag: 1.1.51
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,16 +31,16 @@ The number of the slides for each slider is not limited. Various layers can be a
 *   Possibility of adding unlimited sliders and unlimited slides for each slider
 *   Three options for adding images (from Media Library, by Slider WD Media Upload option or by using image URL)  
 *   Full-width slider support
-*   5 transition effects 
+*   5 transition effects for sliders
 *   Autoplay
 *   Shuffle
 *   Shortcode for easy insert of the slider into post/pages   
 *   Possibility of changing the slide orders (using drag and drop feature)   
 *   Possibility to provide titles for the slides    
-*   Support for music playback  
+*   Support for music playback (one track for entire slider)
 *   Time setting feature for the effect changes  
-*   Right-click protection  
-*   Image changing possibility using bullets    
+*   Right-click protection for avoiding slider image download
+*   Slider image changing possibility using bullets    
 *   Possibility to change design for the bullets, navigation buttons  
 *   Timer bar 
 *   Support for watermarks 
@@ -69,62 +69,24 @@ Upgrade to [WordPress Slider Pro](http://web-dorado.com/products/wordpress-slide
 *   Video Slide and layer (mp4)   
 *   Slider Export/Import.       
 
+The plugin comes with  a few demo sliders on its demo page, which are representing the main types of sliders supported by the plugin, whereas you can always enhance the plugin functionality combining slider types. The mentioned four types are Multi-Layer Slider, 3D Full-Width Slider, Filmstrip Slider, Zoom Effect Slider. Let’s discuss each of the types separately.
+
+Multi-layer slider is designed for displaying textual, image and social sharing layers over the slides. This type of sliders are most commonly used when you are trying to create a slider similar to one created with PowerPoint or other presentation and slider software.
+
+3D Full-width Slider is designed for displaying full-size sliders on any of your website pages. It uses a special effect for shifting between slides creating a 3D effect. This  slider takes the width of the page, where it’s included.
+
+Filmstrip slider is designed for displaying small icons of the set of slides included in the slider. This is especially useful, if you have large set of slides and do want the user to choose which slide of the slider start the showcase. In addition to this, you can use this type of slider as an alternative to gallery plugins, where the displayed image opens up in a larger lightbox, which is not as convenient.
+
+Zoom Effect slider is convenient, where you have small space but want to represent the main image and enlarged extract of it. Here the image gets zoomed without switching between slides of the slider. Each image and its extract are being included in a single slide. Thus this slider is more effective when used with HD images.
+
+If you don’t want to limit yourself with one of these types of sliders, then you can freely use a combination, e.g. have multi-layer slider with 3D effect or flimstrip slider with zoom effect.
+
 
 ###IMPORTANT:    
 If you think you found a bug in Slider WD or have any problem/question concerning the plugin, please check out [WordPress Slider Support Forum](http://web-dorado.com/forum/slider-plugin.html) in our website. If you do not find a solution here, do not hesitate to [click here to contact us](https://web-dorado.com/support/contact-us.html).
 
-
-### Supported languages 
-
  *If you need language of Slider WD which is not included in this list, please contact us and we will do the translation of Slider WD within 3 days. If you find any mistakes in the translation, please contact us and we will make relevant corrections within 3 days. *  
-
-Afrikaans (af)  
-Albanian (sq)  
-Arabic (ar)  
-Armenian (hy_AM)  
-Belarusian (be_BY)  
-Bulgarian (bg_BG)  
-Catalan (ca)  
-Chinese, Simplified (zh_CN)  
-Croatian (hr)  
-Czech (cs_CZ)  
-Danish (da_DK)  
-Dutch (nl_NL) by  Hielke Brandsma     
-Esperanto (eo_EO)  
-Estonian (et)  
-Finnish (fi)  
-French (fr_FR)  
-Galician (gl_ES)  
-Georgian (ka_GE)  
-German (de_DE)  
-Greek (el)  
-Hebrew (he_IL)  
-Hindi (hi_IN)  
-Hungarian (hu_HU)  
-Indonesian (id_ID)  
-Italian (it_IT)  
-Japanese (ja)  
-Korean (ko_KR)  
-Latvian (lv)  
-Lithuanian (lt_LT)  
-Macedonian (mk_MK)  
-Malay (ms_MY)  
-Maltese (mt_MT)  
-Norwegian (nb_NO)  
-Persian (fa_IR)  
-Polish (pl_PL)  
-Portuguese (pt_PT)  
-Russian (ru_RU)  
-Romanian (ro_RO)  
-Serbian (sr_RS)  
-Slovak (sk_SK)  
-Spanish (es_ES)  
-Swedish (sv_SE)  
-Tamil (ta)  
-Thai (th)  
-Turkish (tr_TR)  
-Ukrainian (uk_UA)  
-Vietnamese (vi)  
+ 
 
 == Installation ==   
 
@@ -159,6 +121,10 @@ After downloading the ZIP file of the slider plugin,
 
 
 == Changelog ==
+
+= 1.1.51 =
+* Fixed: Active thumbnail in carousel view.    
+* Changed: Loading gif.      
 
 = 1.1.50 =
 * Changed: Featured themes page.      

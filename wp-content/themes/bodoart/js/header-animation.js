@@ -54,6 +54,12 @@ jQuery( document ).ready( function( $ ) {
 	  		} else if ( $window.scrollTop() == 0 ) {
 	  			addNavigationClasses();
 	  		}
+
+	  		if ( !$body.hasClass('home') && $window.scrollTop() > 420 ) {
+	  			$('.sidebar-contact-info').css('margin-top', '0');
+	  		} else {
+	  			$('.sidebar-contact-info').css('margin-top', '-196px');
+	  		}
 	}
 
 	// Getting the current width of the screen when the user resizes the window
@@ -61,7 +67,7 @@ jQuery( document ).ready( function( $ ) {
 		getCurrentWidth();
 	});
 
-	// 
+	// The animation is happening on scroll event
 	$window.scroll(function() {
 		if ( getCurrentWidth() > 1200 ) {
 			scrollAnimation();

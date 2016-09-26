@@ -1,4 +1,5 @@
 	</content>
+	</div> 
 	<footer>	          
 		<p>Copyright Bodoart | <?php echo date('Y'); ?></p>
 	</footer>

@@ -40,6 +40,9 @@ button {
 	outline: none;
 }
 
+.single .page-container {
+    min-height: calc(100vh - 172px);
+}
 
 
 /* ==========================
@@ -58,15 +61,18 @@ button {
 .single-anna_graphic .hamburger-inner,
 .single-anna_graphic .hamburger-inner::before,
 .single-anna_graphic .hamburger-inner::after,
+.single-anna_glass header nav,
+.single-anna_textil header nav,
+.single-anna_graphic header nav,
 .page-template-page-anna-bodo header nav {
     background-color: #009999;
 }
 
 .page-template-page-anna-bodo .page-heading,
 .page-template-page-anna-bodo .art-heading,
-.single-anna_glass .primary h1,
-.single-anna_textil .primary h1,
-.single-anna_graphic .primary h1 {
+.single-anna_glass .sidebar-nav h1,
+.single-anna_textil .sidebar-nav h1,
+.single-anna_graphic .sidebar-nav h1 {
     color: #009999;
 }
 
@@ -79,14 +85,16 @@ button {
 .single-jeno_ceramics .hamburger-inner,
 .single-jeno_ceramics .hamburger-inner::before,
 .single-jeno_ceramics .hamburger-inner::after,
+.single-jeno_glass header nav,
+.single-jeno_ceramics header nav,
 .page-template-page-jeno-bodo header nav {
     background-color: #b7713f;
 }
 
 .page-template-page-jeno-bodo .page-heading,
 .page-template-page-jeno-bodo .art-heading,
-.single-jeno_glass .primary h1,
-.single-jeno_ceramics .primary h1 {
+.single-jeno_glass .sidebar-nav h1,
+.single-jeno_ceramics .sidebar-nav h1 {
     color: #b7713f;
 }
 
@@ -261,12 +269,16 @@ header {
     background-position: -66px 0px;
 }
 
-.page-template-page-jeno-bodo .logo {
+.page-template-page-jeno-bodo .logo,
+.single-jeno_glass .logo,
+.single-jeno_ceramics .logo {
     background-position: 0px 0px; 
 }
 
 .page-template-page-anna-bodo .logo,
-.single-anna_glass .logo {
+.single-anna_glass .logo,
+.single-anna_textil .logo,
+.single-anna_graphic .logo {
     background-position: -130px 0px; 
 }
 
@@ -353,7 +365,7 @@ content {
 
 .page-template-page-anna-bodo content,
 .page-template-page-jeno-bodo content {
-    margin-top: 110px;
+    margin-top: 122px;
 }
 
 .arts-container {
@@ -396,6 +408,10 @@ content {
 .logged-in .anna-scroll-nav,
 .logged-in .jeno-scroll-nav {
     top: 118px;
+}
+
+.sidebar-contact-info {
+    display: none;
 }
 
 .anna-scroll-nav,
@@ -488,7 +504,7 @@ content {
 
 /* Single Page Styles */
 
-.single .primary h1 {
+.single .sidebar-nav h1 {
     font-weight: 100;
 }
 
@@ -598,6 +614,11 @@ footer p {
         transition-duration: .4s;
     }
 
+    a.header-phone,
+    .phone-numbers {
+        display: none;
+    }
+
     /* Header Animation Styles */
 
     .home header.animate {
@@ -644,10 +665,187 @@ footer p {
         transition-duration: .4s;
     }
 
-    /* Content Styles */
+    /* ==========================
+    * Content Styles
+    =============================*/    
+    .arts-container {
+        float: left;
+    }
+
+    /* Sidebar Navigation */
+    .sidebar-contact-info {
+        display: block;
+        margin-top: -196px;
+        transition-duration: .4s;
+    }
+
+    .anna-profile-image-small {
+        display: block;
+        background: url(img/anna-profile.jpg);
+        background-size: 100px 100px;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
+    .jeno-profile-image-small {
+        display: block;
+        background: url(img/jeno-profile.jpg);
+        background-size: 100px 100px;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
+    .page-heading-small {
+        width: auto;
+        font-weight: 100;
+        font-size: 1em;
+        color: #fff;
+        text-align: center;
+    }
+
+    .contact-info-small {
+        width: 120px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .contact-info-small a {
+        display: block;
+        font-size: 0.75em;
+        min-height: 15px;
+        background-repeat: no-repeat;
+        background-size: 15px 15px;
+        padding: 0 0 0 30px;
+        margin: 0 0 10px;
+        color: #fff;
+    }
+
+    .contact-info-small li.phone a {
+        background-image: url(img/phone.png);
+    }
+
+    .contact-info-small li.email a {
+        background-image: url(img/mail.png);
+    }
+
+    .page-template-page-anna-bodo .sidebar-nav {
+        background: #009999;
+    }
+
+    .page-template-page-jeno-bodo .sidebar-nav {
+        background: #b7713f;
+    }
+
+    .sidebar-nav {
+        width: 12%;
+        position: fixed;
+        top: 72px;
+        height: 100%;
+        padding: 1em 0;
+        z-index: -1;
+        box-shadow: inset -8px -30px 40px -10px #222;
+    }
+
+    .scroll-nav {
+        width: 125px;
+        min-width: 125px;
+        position: relative;
+        background: none;
+        top: 0;
+        opacity: 1;
+        margin: 0 auto;
+    }
+
+    .scroll-nav ul li {
+        float: none;
+        width: 100px;
+        padding: 2em 0.5em;
+        text-align: left;
+        font-size: 0.75em;
+    }
+
+    .scroll-nav ul li a {
+        color: #fff;
+    }
+
+    /* Page Content Styles */
+    .page-content-container {
+        width: 88%;
+        float: right;
+    }
+
     .post-type-content img:hover {
         transform: scale(1.1);
     }
 
+    /* Person Specific Page Styles */
+    .profile-image-container,
+    .contact-info-container {
+        float: left;
+        width: 50%;
+        padding: 1em;
+    }
+
+    .anna-profile-image,
+    .jeno-profile-image {
+        margin: 0;
+        float: right;
+    }
+
+    .page-heading {
+        text-align: left;
+    }
+
+    .contact-info {
+        margin: 0;
+    }
+
+
+
+    .profile-image-container {
+        border-right: 1px solid #ddd;
+    }
+
+    .art-heading {
+        clear: both;
+    }
+
+    .page .post-type-content {
+        width: 23.97%;
+        margin-right: 1em;
+        margin-bottom: 0;
+        height: 150px;
+        overflow: hidden;
+    }
+
+    .page .post-type-content:nth-child(4n + 0) {
+        margin-right: 0;
+    }
+
+
+    /* Single Page Styles*/
+    .single content {
+        margin-top: 122px;
+    }
+
+    .single .arts-container {
+        float: none;
+        padding: 0;
+    }
+
+    .single .page-content-container {
+        width: 60%;
+        padding: 1em 0;
+    }
+
+    .single .sidebar-nav {
+        width: 40%;
+        padding: 3em 0;
+        z-index: 0;
+    }
 }
 

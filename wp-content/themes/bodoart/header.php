@@ -8,7 +8,8 @@
 	<?php wp_head(); ?>
 
 </head>
-<body <?php body_class(); ?>> 
+<body <?php body_class(); ?>>
+	<div class="page-container">
 	<header class="active animate">
 		<button class="hamburger hamburger--spin-r" type="button">
 			<span class="hamburger-box animate">
