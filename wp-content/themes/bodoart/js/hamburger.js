@@ -4,9 +4,11 @@ jQuery( document ).ready( function( $ ) {
 			$('.phone-numbers').removeClass('active');
 			$(this).toggleClass('is-active');
 			$('header nav').toggleClass('active');
+			$('header nav').toggleClass('wide-active');
 		}else {
 			$(this).toggleClass('is-active');
 			$('header nav').toggleClass('active');
+			$('header nav').toggleClass('wide-active');
 		}
 	});
 

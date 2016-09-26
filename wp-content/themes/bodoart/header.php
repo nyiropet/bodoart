@@ -9,7 +9,7 @@
 
 </head>
 <body <?php body_class(); ?>> 
-	<header class="animate">
+	<header class="active animate">
 		<button class="hamburger hamburger--spin-r" type="button">
 			<span class="hamburger-box animate">
 				<span class="hamburger-inner"></span>
@@ -22,7 +22,7 @@
 				<h1><?php bloginfo('name'); ?></h1>
 			</a>
 		</div>
-		<nav class="animate">
+		<nav class="wide-active animate">
 			<?php
 
 			$defaults = array(

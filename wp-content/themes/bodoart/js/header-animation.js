@@ -2,7 +2,9 @@ jQuery( document ).ready( function( $ ) {
 	
 	var $homeHeader = $('.home header');
 	var $header = $('header');
-	var $hamburger = $('.hamburger-box');
+	var $headerNav = $('header nav');
+	var $hamburger = $('.hamburger');
+	var $hamburgerBox = $('.hamburger-box');
 	var $logoContainer = $('.home .logo-container');
 	var $logo = $('.home header .logo');
 	var $content = $('.home content');
@@ -10,30 +12,60 @@ jQuery( document ).ready( function( $ ) {
 	var $html = $('html');
 	var $window = $(window);
 
-	var animateHeader = function() {
+	// Animation classes on header
+	var removeHeaderAnimationClasses = function() {
 		$homeHeader.removeClass('animate');
 		$logoContainer.removeClass('animate');
 		$logo.removeClass('animate');
 		$content.removeClass('animate');
 	}
 
-	if($window.width() > 1200) { // Needed resize on window
-		$window.scroll(function() {
-	  		if($body.hasClass('home') && $homeHeader.hasClass('animate') ) {
+	// Remove navigation classes
+	var removeNavigationClasses = function() {
+		$headerNav.removeClass('wide-active');
+		$headerNav.removeClass('active');
+		$hamburger.removeClass('is-active');
+		$hamburgerBox.removeClass('animate');
+	}
+
+	// Add navigation classes
+	var addNavigationClasses = function() {
+		$headerNav.addClass('wide-active');
+		$hamburgerBox.addClass('animate');
+	}
+
+	// Getting the current width of the screen
+	var getCurrentWidth = function() {
+		var windowWidth = $window.width();
+		return windowWidth;
+	}
+
+	// Scroll animation
+	var scrollAnimation = function() {
+	  		if ( $body.hasClass('home') && $homeHeader.hasClass('animate') ) {
 	  			$html.css('overflow', 'hidden');
-	  			animateHeader();
-	  			setTimeout(function(){
+	  			removeHeaderAnimationClasses();
+	  			setTimeout( function(){
 	  				$html.css('overflow', 'auto');
 	  				$window.scrollTop(0);
 	  			}, 800);
-	  		} else if( $window.scrollTop() > 1 ) {
-	  			$header.css('height', '72px');	// This is the key to get things done with the navigations
-	  			$hamburger.removeClass('animate');
-	  		} else if ($window.scrollTop() == 0 ) {
-	  			$header.css('height', '122px'); // This is the key to get things done with the navigations
-	  			$hamburger.addClass('animate');
+	  		} else if ( $window.scrollTop() > 1 ) {
+	  			removeNavigationClasses();
+	  		} else if ( $window.scrollTop() == 0 ) {
+	  			addNavigationClasses();
 	  		}
-
-		});
 	}
+
+	// Getting the current width of the screen when the user resizes the window
+	$window.resize(function() {
+		getCurrentWidth();
+	});
+
+	// 
+	$window.scroll(function() {
+		if ( getCurrentWidth() > 1200 ) {
+			scrollAnimation();
+		}
+	});
+
 });

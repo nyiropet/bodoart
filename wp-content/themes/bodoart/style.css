@@ -535,10 +535,6 @@ footer p {
         float: left;
     }
 
-    .post-type-content img:hover {
-        transform: scale(1.1);
-    }
-
     .post-type-content {
         width: 48.777%;
         float: left;
@@ -576,8 +572,12 @@ footer p {
     =============================*/ 
 
     /* Header Navigation */
-
     header nav {
+        height: 0;
+        margin: 0;
+    }
+
+    header nav.wide-active {
         height: 50px;
         margin: 0;
     }
@@ -621,7 +621,7 @@ footer p {
     }
 
     .home header {
-        height: 122px;
+        height: auto;
         transition-duration: .4s;
     }
 
@@ -644,7 +644,10 @@ footer p {
         transition-duration: .4s;
     }
 
-
+    /* Content Styles */
+    .post-type-content img:hover {
+        transform: scale(1.1);
+    }
 
 }
 
