@@ -1,7 +1,7 @@
 	</content>
 	</div> 
 	<footer>	          
-		<p>Copyright Bodoart | <?php echo date('Y'); ?></p>
+		<p>&copy; Bodo arts | <?php echo date('Y'); ?></br>A forrás megjelölésével az oldalon található információk, képek felhasználhatók.</p>
 	</footer>
 
   <?php wp_footer(); ?>	
