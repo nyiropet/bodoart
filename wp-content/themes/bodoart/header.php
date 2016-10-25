@@ -8,7 +8,7 @@
 	<?php wp_head(); ?>
 
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-spy="scroll" data-target=".scroll-nav">
 	<div class="page-container">
 	<header class="active animate">
 		<button class="hamburger hamburger--spin-r" type="button">

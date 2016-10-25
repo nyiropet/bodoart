@@ -1,7 +1,32 @@
 jQuery( document ).ready( function( $ ) {
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+//   // Add smooth scrolling to all links
+//   $("a").on('click', function(event) {
 
+//     // Make sure this.hash has a value before overriding default behavior
+//     if (this.hash !== "") {
+//       // Prevent default anchor click behavior
+//       event.preventDefault();
+
+//       // Store hash
+//       var hash = this.hash;
+
+//       // Using jQuery's animate() method to add smooth page scroll
+//       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+//       $('html, body').animate({
+//         scrollTop: $(hash).offset().top - 90
+//       }, 400, function(){
+   
+//         // Add hash (#) to URL when done scrolling (default click behavior)
+//         window.location.hash = hash;
+//       });
+//     } // End if
+//   });
+ 
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".scroll-nav", offset: 120});   
+
+  // Add smooth scrolling on all links inside the navbar
+  $(".scroll-nav a").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
       // Prevent default anchor click behavior
@@ -13,13 +38,12 @@ jQuery( document ).ready( function( $ ) {
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
-        scrollTop: $(hash).offset().top - 90
-      }, 400, function(){
+        scrollTop: $(hash).offset().top - 120
+      }, 800, function(){
    
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
-    } // End if
+    }  // End if
   });
- 
 });

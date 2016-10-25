@@ -15,11 +15,11 @@
 		</ul>
 	</div>
 	<nav class="anna-scroll-nav scroll-nav">
-		<ul>
-			<li><a href="#about-me"><?php _e( 'Magamról', 'bodoart_text_domain' ); ?></a></li>
-			<li><a href="#glass"><?php _e( 'Üveg', 'bodoart_text_domain' ); ?></a></li>
-			<li><a href="#textil"><?php _e( 'Textil', 'bodoart_text_domain' ); ?></a></li>
-			<li><a href="#graphic"><?php _e( 'Grafika', 'bodoart_text_domain' ); ?></a></li>
+		<ul class="nav nav-pills">
+			<li class="nav-item active"><a href="#about-me"><?php _e( 'Magamról', 'bodoart_text_domain' ); ?></a></li>
+			<li class="nav-item"><a href="#glass"><?php _e( 'Üveg', 'bodoart_text_domain' ); ?></a></li>
+			<li class="nav-item"><a href="#textil"><?php _e( 'Textil', 'bodoart_text_domain' ); ?></a></li>
+			<li class="nav-item"><a href="#graphic"><?php _e( 'Grafika', 'bodoart_text_domain' ); ?></a></li>
 		</ul>
 	</nav>
 </div>
